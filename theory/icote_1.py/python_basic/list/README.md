@@ -107,3 +107,9 @@ print(array)
 # [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
+* 리스트 컴프리헨션은 <strong> 2차원 리스트를 초기화할 때 효과적으로 사용</strong>될 수 있습니다.
+* 특히 N X M 크기의 2차원 리스트를 한 번에 초기화 해야 할 때 매우 유용합니다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧷 array = [[0] * m for _ in range(n)]
+* 만약 2차원 리스트를 초기화할 때 다음과 같이 작성하면 예기치 않은 결과가 나올 수 있습니다.
+&nbsp;&nbsp;&nbsp;&nbsp; 🧷 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎈
