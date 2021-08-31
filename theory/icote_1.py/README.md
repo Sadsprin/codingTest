@@ -9,4 +9,4 @@
 
 * 가장 빠르게 증가하는 항만을 고려하는 표기법입니다.
 
-![bigO]('./img/bigo.jpg')
+![bigO](./img/bigo.jpg)
