@@ -109,7 +109,107 @@ print(array)
 
 * 리스트 컴프리헨션은 <strong> 2차원 리스트를 초기화할 때 효과적으로 사용</strong>될 수 있습니다.
 * 특히 N X M 크기의 2차원 리스트를 한 번에 초기화 해야 할 때 매우 유용합니다.<br>
-&nbsp;&nbsp;&nbsp;&nbsp; 🧷 array = [[0] * m for _ in range(n)]
-* 만약 2차원 리스트를 초기화할 때 다음과 같이 작성하면 예기치 않은 결과가 나올 수 있습니다.
-&nbsp;&nbsp;&nbsp;&nbsp; 🧷 <br>
-&nbsp;&nbsp;&nbsp;&nbsp; 🎈
+```python
+# deep copy 
+# array[0] 과 array[1]의 id가 다름
+# array[0][0]의 값을 바꿔도 array[1][0]의 값은 변하지 않음
+array = [[0] * 3 for _ in range(5)] 
+array[0][0] = 11
+print(array[0][0])
+print(array[1][0])
+
+# 실행 결과
+# 11
+# 0
+```
+* 만약 2차원 리스트를 초기화할 때 다음과 같이 작성하면 예기치 않은 결과가 나올 수 있습니다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎈 위 코드는 전체 리스트 안에 포함된 각 리스트가 모두 같은 객체로 인식됨.
+
+```python
+# shallow copy 
+# array[0] 과 array[1]의 id가 같음
+# array[0][0]의 값을 바꾸면 array[1][0]의 값도 변함
+array = [[0] * 3] * 5
+array[0][0] = 11
+print(array[0][0])
+print(array[1][0])
+
+# 실행 결과
+# 11
+# 11
+```
+
+* 파이썬은 반복을 수행하되 반복을 위한 변수의 값을 무시하고자 할 때 언더바(_)를 자주 사용합니다.
+
+> list internal method
+
+* append()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.append() <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 : 리스트에 원소를 하나 삽입할 때 사용한다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(1)"><br>
+```python
+a = []
+a.append(1)
+print(a)
+# 실행 결과
+# [1]
+```
+* sort()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.sort() | 변수명.sort(reverse = True) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 : 기본 정렬 기능으로 오름차순으로 정렬한다. reverse옵션이 True인 경우 내림차순 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(NlogN)"><br>
+```python
+a = [3,5,1,6,3,7]
+a.sort()
+print(a)
+# 실행 결과
+# [1, 3, 3, 5, 6, 7]
+```
+* reverse()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.reverse() <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 : 리스트의 원소의 순서를 모두 뒤집어 놓는다. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(N)"><br>
+
+```python
+a = [5, 3, 1, 2, 4]
+a.reverse()
+print(a)
+# 실행 결과
+# [4, 2, 1, 3, 5]
+```
+
+* insert()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.insert(삽입할 위치, 삽입할 값) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 : 특정한 인덱스 위치에 원소를 삽입할 때 사용한다. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(N)"><br>
+```python
+a = [1,2,3]
+a.insert(0, 100)
+print(a)
+
+# 실행 결과
+# [100, 1, 2, 3]
+```
+* count()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.count(셀 값) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 :  리스트에서 특정한 값을 가지는 데이터의 개수를 셀 때 사용한다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(N)"><br>
+```python
+a = [1,2,3,3,3,3,1,1,1,12,2,2,2,3]
+print(a.count(1))
+
+# 실행 결과
+# 4
+```
+* remove()<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🧩 사용법 : 변수명.remove(지울 값) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🎲 설명 :  특정한 값을 갖는 원소를 제거하는데, 값을 가진 원소가 여러 개면 하나만 제거한다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 🏓 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=O(N)"><br>
+```python
+a = [1,2,3,3,3,3,1,1,1,12,2,2,2,3]
+a.remove(1)
+print(a)
+
+# 실행 결과
+# [2, 3, 3, 3, 3, 1, 1, 1, 12, 2, 2, 2, 3]
+```
