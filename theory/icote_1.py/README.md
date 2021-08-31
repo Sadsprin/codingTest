@@ -9,4 +9,4 @@
 
 * 가장 빠르게 증가하는 항만을 고려하는 표기법입니다.
 
-<img src="./img/bigo.jpg" width="200" height="400"/>
+<img src="./img/bigo.jpg" width="200" height="200"/>
