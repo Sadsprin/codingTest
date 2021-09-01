@@ -10,7 +10,7 @@
 
 * 가장 빠르게 증가하는 항만을 고려하는 표기법입니다.
 
-<img src="./img/bigo.jpg" width="300" height="300"/>
+<img src="../img/bigo.jpg" width="300" height="300"/>
 
 > 알고리즘 설계 Tip
  
