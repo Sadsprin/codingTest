@@ -1,9 +1,11 @@
+import time
+
 import sys
-from pprint import pprint
 input = sys.stdin.readline
 
 N = int(input())
 move = input().rstrip().split()
+start = time.time()
 vector = {
     'L' : (0, -1),
     'R' : (0, 1),
@@ -22,3 +24,4 @@ for move_ in move:
     x, y = nx, ny
 
 print(x+1, y+1)
+print("execute time : {}".format(time.time() - start))
