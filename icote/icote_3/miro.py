@@ -1,5 +1,5 @@
 from collections import deque
-
+from pprint import pprint
 def bfs(x, y):
     queue = deque()
     queue.append((x, y))
@@ -15,8 +15,9 @@ def bfs(x, y):
                 continue
             elif graph[nx][ny] == 1:
                 graph[nx][ny] = graph[x][y] + 1
+                pprint(graph)
+
                 queue.append((nx, ny))
-                break
     return graph[n - 1][m - 1]
 
 
