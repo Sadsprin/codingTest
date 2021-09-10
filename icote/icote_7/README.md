@@ -8,4 +8,4 @@
 * 각 지점은 그래프에서 노드로 표현
 * 지점간 연결된 도로는 그래프에서 간선으로 표현
 
-![graph]("../img/shortest_path.jpg")
+![graph](../img/shortest_path.jpg)
