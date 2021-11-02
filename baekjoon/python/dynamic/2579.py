@@ -1,3 +1,4 @@
+#FAIL
 N = int(input())
 
 stair = [0]

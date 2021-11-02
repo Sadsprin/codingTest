@@ -1,14 +1,11 @@
 N = int(input())
-res = 0
-while N != 1:
-    if N % 5 == 0:
-        N //= 5
-    elif N % 3 == 0:
-        N //= 3
-    elif N % 2 == 0:
-        N //= 2
-    else:
-        N -= 1
-    print(N)
-    res += 1
-print(res)
+d = [0] * (30001)
+
+for i in range(2, N+1):
+    d[i] = d[i - 1] + 1
+    if i % 2 == 0:
+        d[i] = min(d[i], d[i//2] + 1)
+    if i % 3 == 0:
+        d[i] = min(d[i], d[i//3] + 1)
+    if i % 5 == 0:
+        d[i] = min(d[i], d[i//5] + 1)        

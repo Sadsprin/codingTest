@@ -19,3 +19,5 @@ for _ in range(T):
     sum += (1 if judge(input()) else 0)
 print(sum)
 
+a = 'helloh'
+sorted(a, key=a.find)

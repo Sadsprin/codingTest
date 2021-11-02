@@ -13,7 +13,7 @@ for idx, i in enumerate(prime):
         prime_num.append(idx**2)
 ans = 0
 for i in range(a, b+1):
-    for j in prime_num:
+    for j in range(a, ):
         if i % j == 0:
             ans -= 1
             continue

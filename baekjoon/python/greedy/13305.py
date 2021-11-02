@@ -8,12 +8,9 @@ gasstation = tuple(map(int, input().split()))
 now_price = int(1e9+1)
 result = 0
 for i in range(len(gasstation)-1):
-    
     if gasstation[i] < now_price:
         now_price = gasstation[i]
-    
     result += now_price * distance[i]
-    print(distance[i], now_price)
 print(result)
 
 

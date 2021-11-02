@@ -11,7 +11,5 @@ while True:
     if sugar < 0:
         bag = -1
         break
-
-
 print(bag)
     

@@ -1,5 +1,4 @@
 import sys
-from pprint import pprint
 input = sys.stdin.readline
 
 def dfs(graph, isvisited, start, virus):
@@ -9,11 +8,6 @@ def dfs(graph, isvisited, start, virus):
         if not isvisited[i]:
             virus = dfs(graph, isvisited, i, virus)
     return virus
-
-
-
-
-
 
 comN = int(input())
 isvisited = [False] * (comN + 1)

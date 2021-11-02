@@ -1,3 +1,1 @@
-import sys
-input = sys.stdin.readline
-print(*sorted([int(input()) for i in range(int(input()))]),sep="\n")
+print(*sorted(map(int,[*open(0)])),sep="\n")

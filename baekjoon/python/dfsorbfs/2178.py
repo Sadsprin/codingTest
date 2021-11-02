@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-from pprint import pprint
 read = sys.stdin.readline
 
 
@@ -17,10 +16,6 @@ def bfs(graph, start, end):
                 graph[nx][ny] = graph[xx][yy] + 1
                 queue.append((nx, ny))
     return graph[n-1][m-1]
-
-
-
-
 
 n, m = map(int, read().split())
 graph = []

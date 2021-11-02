@@ -1,5 +1,4 @@
 import sys
-from pprint import pprint
 read = sys.stdin.readline
 num = int(read())
 graph = [[] for i in range(num)]

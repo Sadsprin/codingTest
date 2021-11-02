@@ -20,8 +20,8 @@ for i in sys.stdin:
                 else: check = False
             else: check = False
     if check:
-        if stack: print("NO")
-        else: print("YES")
-    else: print("No")
+        if stack: print("no")
+        else: print("yes")
+    else: print("no")
 
 

@@ -1,6 +1,9 @@
 import sys
 input = sys.stdin.readline
 
+# 에라토스테네스의 체로 입력 받은 가장 큰수 만큼 소수를 판정하는 리스트를 만든뒤
+# 투 포인터를 통해서 front = 2, rear = 소수의 크기 -1 로 설정한 후 front, rear을 코드의 조건문을 이용해 이동한다.
+# front와 rear이 엇갈리기 전 최근의 값을 res에 입력한다.
 T = int(input())
 num_list = []
 for _ in range(T):
@@ -17,7 +20,7 @@ for i in range(2, max_sqrt):
         for j in range(i * i, max_value, i):
             prime[j] = False
 for i in num_list:
-    front = 2
+    front = i // 2
     rear = i - 1
     res_left, res_right = 0,0
     while front <= rear:
